@@ -1,0 +1,1170 @@
+/*=============================== General ===============================*/
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    padding-bottom: 70px;
+    margin: 0;
+}
+
+body main {
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/*=============================== Header ===============================*/
+header {
+    position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #000;
+    padding: 10px;
+	z-index: 16;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header #logotipo {
+	position: relative;
+	display: block;
+	width: 129px;
+	height: 48px;
+	background-image: url(../imagenes/logos/logotipo.png);
+	background-size: 129px 48px;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-indent: -9999px;
+    text-decoration: none;
+}
+
+#logotipo:focus {
+    text-decoration: none;
+}
+
+header #contenedor-menu {
+    position: relative;
+    display: block;
+    text-align: center;
+    background-color: #000;
+}
+
+header #menu-movil {
+	position: fixed;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	top: 12px;
+	right: 15px;
+	text-indent: -9999px;
+	background-image: url(../imagenes/logos/menu.svg);
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	z-index: 16;
+}
+
+header #menu-movil:hover{
+	background-color: #606060;
+}
+
+header nav {
+    position: relative;
+    float: right;
+    height: 48px;
+    background-color: #000;
+    height: auto;
+    text-align: center;
+}
+
+header nav a {
+    position: relative;
+	display: inline-block;
+    margin-top: 9px;
+	padding: 3px 20px;
+    vertical-align: middle;
+	color: #fff;
+	font-size: 16px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #606060;
+    text-decoration: none;
+}
+
+/* No funciona. Ocupamos algo para esconder si un link fue visitado cuando regresen a la página. */
+header nav a:visited {
+    text-decoration: none;
+}
+
+/*=============================== Footer ===============================*/
+footer {
+    position: relative;
+	display: block;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    margin-top: 70px;
+	background-color: #000;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    z-index: 3px;
+}
+
+footer span {
+    position: relative;
+    display: inline-block;
+    margin: 25px;
+}
+
+footer #footer-facebook {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    margin: 20px;
+    background-image: url(../imagenes/logos/logofacebook.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer #footer-instagram {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    background-image: url(../imagenes/logos/logoinsta.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#footer-facebook:focus,
+#footer-instagram:focus {
+    text-decoration: none;
+}
+
+footer #footer-terminos {
+    cursor: pointer;
+}
+
+/*=============================== Modal de Términos ===============================*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-header {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    border: 1px solid #606060;
+    width: 75%; 
+}
+
+.modal-texto {
+    position: relative;
+    display: block;
+    padding: 20px;
+}
+
+/* The Close Button */
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+    color: #606060;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*=============================== Parallax ===============================*/
+.parallax
+{
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax .overlay
+{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,60,0.4);
+	z-index: 1;
+}
+
+#foto-parallax
+{
+    background-image: url(../imagenes/pantallainicio/portada.jpg);
+	background-color: #000;
+	z-index: 1;
+}
+
+.parallax .contenido-parallax
+{
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+	z-index: 1;
+}
+
+/*=============================== Pagina Principal ===============================*/
+#pagina-principal-portada {
+    background-image: url(../imagenes/pantallainicio/portada.jpg);
+	background-color: #000;
+	z-index: 1;
+}
+
+#pagina-principal-titulo {
+	position: relative;
+	display: block;
+    width: 425px;
+    height: 505px;
+    margin: 0 auto;
+	text-indent: -9999px;
+}
+
+#pagina-principal-poster {
+    position: relative;
+	display: block;
+    top: -100px;
+    width: 100%;
+    height: 2092px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 30px;
+	text-indent: -9999px;
+    z-index: 2;
+}
+
+.pagina-principal-seccion {
+    position: relative;
+    display: block;
+    width: auto;
+    height: 1000px;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+}
+
+.pagina-principal-seccion .overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,60,0.4);
+    z-index: 2;
+}
+
+.pagina-principal-cuadro {
+    position: relative;
+    display: block;
+    width: 446px;
+    height: auto;
+    padding: 40px;
+    margin: 50% auto;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #fff;
+    text-align: center;
+}
+
+.pagina-principal-cuadro img {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: auto;
+}
+
+.pagina-principal-cuadro p {
+    position: relative;
+    display: block;
+    font-size: 36px;
+    color: #fff;
+}
+
+.pagina-principal-parrafo {
+    position: relative;
+    display: block;
+    width: 400px;
+    font-size: 24px;
+    color: #fff;
+    margin: 50% auto;
+    text-align: left;
+}
+
+#seccion-concurso {
+    background-image: url(../imagenes/pantallainicio/concurso.jpg);
+    background-color: #000;
+    z-index: 2;
+}
+
+#seccion-hospedaje {
+    background-image: url(../imagenes/pantallainicio/planea1.jpg);
+    background-color: #000;
+    z-index: 2;
+}
+
+#seccion-exponentes {
+    background-image: url(../imagenes/pantallainicio/conciertos1.jpg);
+    background-color: #000;
+    z-index: 2;
+}
+
+#seccion-conferencias {
+    background-image: url(../imagenes/pantallainicio/conferencias1.jpg);
+    background-color: #000;
+    z-index: 2;
+}
+
+#seccion-eventos {
+    background-image: url(../imagenes/pantallainicio/concurso1.jpg);
+    background-color: #000;
+    z-index: 2;
+}
+
+/*============================ Páginas de información ============================*/
+#pagina-titulo {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+#pagina-titulo h1 {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    font-size: 48;
+    font-weight: bold;
+}
+
+#pagina-titulo h3 {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+#pagina-titulo p {
+    position: relative;
+    display: block;
+    margin-top: 24px;
+}
+
+.pagina-contenido {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+}
+
+.pagina-izq {
+    float: right;
+    margin: 35px 10% 0 0;
+    text-align: left;
+}
+
+.pagina-der {
+    float: left;
+    margin: 35px 0 0 10%;
+    text-align: left;
+}
+
+.pagina-contenido h2 {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 36;
+}
+
+.pagina-contenido ul {
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.pagina-info {
+    position: relative;
+    display: block;
+}
+
+.pagina-info p {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.pagina-foto {
+    position: relative;
+    display: block;
+    width: 400px; /* Hay que cambiarlo según la imagen. */
+    height: 530px; /* Hay que cambiarlo según la imagen. */
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 25px;
+    text-indent: -9999px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/*=============================== Concurso ===============================*/
+#concurso-portada {
+    height: 50%;
+    background-image: url(../imagenes/concurso/portada.png);
+    background-size: auto 518px; /*No hay forma de que llene todo el espacio en lg sin distorsionarse o que solo se vea el cielo*/
+    background-position: top;
+	background-color: #000;
+	z-index: 1;
+}
+
+#concurso-icono {
+    position: relative;
+    display: block;
+    margin: -68px auto 0;
+    width: 137px;
+    height: 137px;
+    background-image: url(../imagenes/concurso/iconoconcurso.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+.concurso-boton {
+    margin: 25px auto;
+    color: #fff;
+    padding: 35px 25px;
+    /*Inicio 1000A5 Final 49148E*/
+}
+
+#concurso-bases {
+    background-image: url(../imagenes/concurso/concurso1.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#concurso-premios {
+    background-image: url(../imagenes/concurso/concurso2.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#concurso-inscripcion {
+    background-image: url(../imagenes/concurso/concurso3.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#concurso-pete {
+    background-image: url(../imagenes/concurso/juez1.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#concurso-roger {
+    background-image: url(../imagenes/concurso/juez2.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#concurso-jack {
+    background-image: url(../imagenes/concurso/juez3.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+/*=============================== Conferencias ===============================*/
+#conferencias-portada {
+    height: 50%;
+    background-image: url(../imagenes/conferencias/portada.jpg);
+    background-size: auto 518px; /*No hay forma de que llene todo el espacio en lg sin distorsionarse o que solo se vea el cielo*/
+    background-position: top;
+	background-color: #000;
+	z-index: 1;
+}
+
+#conferencias-icono {
+    position: relative;
+    display: block;
+    margin: -68px auto 0;
+    width: 137px;
+    height: 137px;
+    background-image: url(../imagenes/conferencias/iconoconferencia.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+.conferencias-reloj {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 27px;
+    height: 27px;
+    margin: 5px;
+    background-image: url(../imagenes/conferencias/reloj.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+.conferencias-punto {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 36px;
+    margin: 5px;
+    background-image: url(../imagenes/conferencias/ubicacion.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+#conferencias-foto1 {
+    height: 314px; 
+    background-image: url(../imagenes/conferencias/confe1.jpg);
+    background-size: cover;
+    background-color: #000;
+    z-index: 1;
+}
+
+#conferencias-foto2 {
+    height: 400px; 
+    background-image: url(../imagenes/conferencias/confe2.jpg);
+    background-size: cover;
+    background-color: #000;
+    z-index: 1;
+}
+
+#conferencias-foto3 {
+    height: 250px; 
+    background-image: url(../imagenes/conferencias/confe3.jpg);
+    background-size: cover;
+    background-color: #000;
+    z-index: 1;
+}
+
+/*=============================== Eventos ===============================*/
+/*                     Reutiliza cosas de Conferencias                  */
+#eventos-portada {
+    height: 50%;
+    background-image: url(../imagenes/eventos/portada.jpg);
+    background-size: auto 518px; /*No hay forma de que llene todo el espacio en lg sin distorsionarse o que solo se vea el cielo*/
+    background-position: top;
+	background-color: #000;
+	z-index: 1;
+}
+
+#eventos-icono {
+    position: relative;
+    display: block;
+    margin: -68px auto 0;
+    width: 137px;
+    height: 137px;
+    background-image: url(../imagenes/eventos/iconoeventos.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+.eventos-transporte {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 31px;
+    height: 25px;
+    margin: 5px;
+    background-image: url(../imagenes/eventos/transporte.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+#eventos-foto1 {
+    width: 654px;
+    height: 363px; 
+    margin-left: -15%;
+    background-image: url(../imagenes/eventos/patrick.jpg);
+    background-size: cover;
+    background-color: #000;
+    z-index: 1;
+}
+
+#eventos-foto2 {
+    width: 492px;
+    height: 370px; 
+    margin-right: -10%;
+    background-image: url(../imagenes/eventos/bulldog.jpg);
+    background-size: cover;
+    background-color: #000;
+    z-index: 1;
+}
+
+.eventos-mapa {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 25px 0;
+}
+
+/*=============================== Estadia ===============================*/
+#estadia-portada {
+    height: 50%;
+    background-image: url(../imagenes/estadia/portada2.jpg);
+    background-size: auto 518px; /*No hay forma de que llene todo el espacio en lg sin distorsionarse o que solo se vea el cielo*/
+    background-position: top;
+    background-color: #000;
+    z-index: 1;
+}
+
+#estadia-icono {
+    position: relative;
+    display: block;
+    margin: -68px auto 0;
+    width: 137px;
+    height: 137px;
+    background-image: url(../imagenes/estadia/iconoviaje.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+.estadia-boton {
+    margin: 25px auto;
+    color: #fff;
+    padding: 35px 25px;
+    /*Inicio 1000A5 Final 49148E*/
+}
+
+#estadia-hoteles {
+    width: 649px;
+    height: 406px; 
+    margin-left: -15%;
+    background-image: url(../imagenes/estadia/viaje1.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#estadia-quinta {
+    background-image: url(../imagenes/estadia/viaje2.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#estadia-casareyna {
+    background-image: url(../imagenes/estadia/viaje3.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+#estadia-balcon {
+    background-image: url(../imagenes/estadia/viaje4.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+/*Agregar Carousel*/
+#estadia-galeria {
+    background-image: url(../imagenes/estadia/viaje4.jpg);
+    background-color: #000;
+    z-index: 1;
+}
+
+.item {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.item img {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+#carousel-example-generic {
+    margin-top: 25px;
+    height: 550px;
+}
+
+.boton-izq {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-image: url(../imagenes/estadia/flecha_izquierda_negra.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+/*=============================== Invitados ===============================*/
+#invitados-portada {
+    height: 50%;
+    background-image: url("../imagenes/invitados/portada.jpg");
+    background-size: auto 518px; /*No hay forma de que llene todo el espacio en lg sin distorsionarse o que solo se vea el cielo*/
+    background-position: top;
+	background-color: #000;
+	z-index: 1;
+}
+
+#invitados-icono {
+    position: relative;
+    display: block;
+    margin: -68px auto 0;
+    width: 137px;
+    height: 137px;
+    background-image: url(../imagenes/invitados/iconoparti.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+#invitados-poster {
+    position: relative;
+	display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+	text-indent: -9999px;
+    z-index: 2;
+}
+
+.invitados-comentarios {
+    position: relative;
+    display: block;
+    width: 85%;
+    height: auto;
+    margin: 15px auto;
+    padding: 10px;
+    border-top-style: solid;
+    border-top-color: #606060;
+    border-top-width: 10px;
+}
+
+.invitados-foto-usuario {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.invitados-nombre-fecha {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    width: 20%;
+    vertical-align: middle;
+}
+
+.invitados-texto-calificacion {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+}
+
+.invitados-estrellas {
+    position: relative;
+    display: block;
+    width: 109px;
+    height: 16px;
+    margin: 5px;
+    background-image: url(../imagenes/invitados/estrellas.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+/*=============================== Registro ===============================*/
+#registro-portada {
+    height: 50%;
+    background-image: url(../imagenes/registro/portada.jpg);
+    background-size: auto 518px; /*No hay forma de que llene todo el espacio en lg sin distorsionarse o que solo se vea el cielo*/
+    background-position: top;
+    background-color: #000;
+    z-index: 1;
+}
+
+#registro-icono {
+    position: relative;
+    display: block;
+    margin: -68px auto 0;
+    width: 137px;
+    height: 137px;
+    background-image: url(../imagenes/registro/iconoregistro.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+label{
+    margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+    background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 40px 40px;
+
+}
+
+.login-button{
+    margin-top: 5px;
+}
+
+.login-register{
+    font-size: 11px;
+    text-align: center;
+}
+/*=============================== Boletos ===============================*/
+#boletos-portada {
+    height: 50%;
+    background-image: url(../imagenes/boletos/portada.jpg);
+    background-size: auto 518px; /*No hay forma de que llene todo el espacio en lg sin distorsionarse o que solo se vea el cielo*/
+    background-position: top;
+    background-color: #000;
+    z-index: 1;
+}
+
+#boletos-icono {
+    position: relative;
+    display: block;
+    margin: -68px auto 0;
+    width: 137px;
+    height: 137px;
+    background-image: url(../imagenes/boletos/iconoboleto.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+#boletos-main {
+    margin: 0 auto;
+}
+
+/*=============================== Medias ===============================*/
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    /* XS */
+    /* Menú del header */
+    header nav a {
+		display: block;
+		clear: both;
+		width: 100%;
+		padding: 12px 20px;
+		text-align: center;
+	}
+
+	header nav {
+		display: none;
+        width: 100%;
+	}
+
+    /* Columnas en las páginas de información */
+    .pagina-izq,
+    .pagina-der {
+        float: none;
+        margin: 0 auto;
+        text-align: left;
+        padding: 0;
+    }
+
+    /* Ajustes de la página principal */
+    #pagina-principal-titulo {
+        width: 95%;
+        height: auto;
+        margin: 0 auto;   
+    }
+
+    #pagina-principal-poster {
+        height: auto;
+        border-width: 15px;
+    }
+
+    .pagina-principal-cuadro {
+        width: 95%;
+        margin: 20% auto;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .pagina-principal-parrafo {
+        width: 95%;
+        margin: 20% auto;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	/* SM */
+    /* Menú del header */
+	header nav a {
+		display: block;
+		clear: both;
+		width: 100%;
+		padding: 12px 20px;
+		text-align: center;
+	}
+
+	header nav {
+		display: none;
+        width: 100%;
+	}
+
+    /* Columnas en las páginas de información */
+    .pagina-izq,
+    .pagina-der {
+        float: none;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    /* Ajustes de la página principal */
+    #pagina-principal-titulo {
+        width: 425px;
+        height: 505px;
+        margin: 0 auto;   
+    }
+
+    #pagina-principal-poster {
+        height: auto;
+        border-width: 30px;
+    }
+
+    .pagina-principal-cuadro {
+        width: 446px;
+        margin: 20% auto;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .pagina-principal-parrafo {
+        width: 400px;
+        margin: 20% auto;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	/* MD */
+    /* Menú del header */
+	header nav a {
+		display: inline-block;
+		width: auto;
+		padding: 3px 20px;
+		text-align: center;
+	}
+
+	header nav {
+		display: block;
+	}
+
+    /* Columnas en las páginas de información */
+    .pagina-izq {
+        float: right;
+        margin: 35px 10% 0 0;
+        text-align: left;
+    }
+
+    .pagina-der {
+        float: left;
+        margin: 35px 0 0 10%;
+        text-align: left;
+    }
+
+    /* Ajustes de la página principal */
+    #pagina-principal-titulo {
+        width: 425px;
+        height: 505px;
+        margin: 0 auto;   
+    }
+
+    #pagina-principal-poster {
+        height: auto;
+        border-width: 30px;
+    }
+
+    .pagina-principal-cuadro {
+        width: 446px;
+        margin: 50% auto;
+        padding: 40px;
+        font-size: 36px;
+    }
+
+    .pagina-principal-parrafo {
+        width: 400px;
+        margin: 50% auto;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1200px)  {
+	/* LG */
+    /* Menú del header */
+	header nav a {
+		display: inline-block;
+		width: auto;
+		padding: 3px 20px;
+		text-align: center;
+	}
+
+	header nav {
+		display: block;
+	}
+
+    /* Columnas en las páginas de información */
+    .pagina-izq {
+        float: right;
+        margin: 35px 10% 0 0;
+        text-align: left;
+    }
+
+    .pagina-der {
+        float: left;
+        margin: 35px 0 0 10%;
+        text-align: left;
+    }
+
+    /* Ajustes de la página principal */
+    #pagina-principal-titulo {
+        width: 425px;
+        height: 505px;
+        margin: 0 auto;   
+    }
+
+    #pagina-principal-poster {
+        height: auto;
+        border-width: 30px;
+    }
+
+    .pagina-principal-cuadro {
+        width: 446px;
+        margin: 50% auto;
+        padding: 40px;
+        font-size: 36px;
+    }
+
+    .pagina-principal-parrafo {
+        width: 400px;
+        margin: 50% auto;
+        text-align: left;
+    }
+}

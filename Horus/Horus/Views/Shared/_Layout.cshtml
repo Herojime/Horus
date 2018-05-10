@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!--  HEAD INICIAL
+        <head>
+            <meta charset="utf-8">
+            <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+            <script src="javascript/bootstrap.min.js"></script>
+            <script src="javascript/funciones.js"></script>
+            <link rel="stylesheet" type="text/css" href="css/estilos.css">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <title>Zócalo - XVII Encuentro Internacional de Rock</title>
+        </head>
+        -->
+
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Horus </title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+        <div class="div container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="index.html" id="logotipo">Logotipo</a>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    </div>
+                    <div class="col-md-10" id="contenedor-menu">
+                        <span id="menu-movil" class="visible-xs-inline-block visible-sm-inline-block">Menú</span>
+                        <nav>
+                            <a href="concurso.html">Concurso</a>
+                            <a href="conferencias.html">Conferencias</a>
+                            <a href="eventos.html">Eventos</a>
+                            <a href="estadia.html">Estadía</a>
+                            <a href="invitados.html">Invitados</a>
+                            <a href="boletos.html">Boletos</a>
+                        </nav>
+                    </div>
+                </div>
+        </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="div container-fluid">
+                <div class="row">
+                    <!-- Redes sociales-->
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="http://www.facebook.com" id="footer-facebook">facebook</a>
+                        <a href="http://www.instagram.com" id="footer-instagram">instagram</a>
+                    </div>
+
+                    <!-- Términos y condiciones-->
+                    <div class="col-xs-12 col-sm-4">
+                        <span id="footer-terminos">Términos y condiciones</span>
+                    </div>
+                    <!-- Copyright-->
+                    <div class="col-xs-12 col-sm-4">
+                        <span>&copy; @DateTime.Now.Year - AlejanKorps</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Horus";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+            </p>
+        </div>
+    </section>
+}
+        <!-- La imagen de portada con parallax. -->
+<div class="parallax" id="pagina-principal-portada">
+    <div class="overlay"></div>
+    <div class="contenido-parallax">
+        <img src="imagenes/pantallainicio/letrasportada.png" alt="Titulo" id="pagina-principal-titulo">
+    </div>
+</div>
+<!-- El contenido principal de la pagina.-->
+<main>
+    <div class="div container">
+        <!-- El poster del evento.-->
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="imagenes/pantallainicio/poster.png" alt="Poster" id="pagina-principal-poster">
+            </div>
+        </div>
+    </div>
+
+    <!-- Las secciones correspondientes a las otras páginas.-->
+    <div class="div container-fluid">
+        <!-- Concurso-->
+        <div class="row pagina-principal-seccion" id="seccion-concurso">
+            <div class="overlay">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-cuadro">
+                        <img src="imagenes/pantallainicio/iconospantallas/concursos.svg" alt="Concursos">
+                        <p>PARTICIPA EN NUESTRO CONCURSO DE ROCK: "GUERRA DE BANDAS"</p>
+                        <p>Ir a sección →</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-parrafo">
+                        <p>Participa en nuestro concurso, donde no solo tendrás la oportunidad de ganar grandes premios, si no que además podrás estar en el mismo escenario con algunos de nuestros grandes invitados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hospedaje-->
+        <div class="row pagina-principal-seccion" id="seccion-hospedaje">
+            <div class="overlay">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-parrafo">
+                        <p>Planea tu viaje a la Ciudad de México y encuentra las grandes promociones en hoteles y restaurantes que obtendrás al apartar tu lugar o comprar tu boleto.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-cuadro">
+                        <img src="imagenes/pantallainicio/iconospantallas/hoteles.svg" alt="Hospedaje">
+                        <p>PLANEA TU VIAJE Y APROVECHA NUESTRAS PROMOCIONES</p>
+                        <p>Ir a sección →</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Exponentes-->
+        <div class="row pagina-principal-seccion" id="seccion-exponentes">
+            <div class="overlay">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-cuadro">
+                        <img src="imagenes/pantallainicio/iconospantallas/exponentes.svg" alt="Concursos">
+                        <p>ESCUCHA A LOS MÁS GRANDES EXPONENTES DEL ROCK</p>
+                        <p>Ir a sección →</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-parrafo">
+                        <p>Durante tres días serás capaz de escuchar a los más grandes exponentes del rock reunidos en un mismo lugar, no te pierdas a oportunidad de asistir a sus conciertos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Conferencias-->
+        <div class="row pagina-principal-seccion" id="seccion-conferencias">
+            <div class="overlay">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-parrafo">
+                        <p>Se impartirán conferencias magistrales durante las tardes, donde podrás debatir y conversar sobre temas referentes al rock y a otros géneros.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-cuadro">
+                        <img src="imagenes/pantallainicio/iconospantallas/conferencia.svg" alt="Hospedaje">
+                        <p>CONFERENCIAS MAGISTRALES IMPARTIDAS POR EXPERTOS</p>
+                        <p>Ir a sección →</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Eventos-->
+        <div class="row pagina-principal-seccion" id="seccion-eventos">
+            <div class="overlay">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-cuadro">
+                        <img src="imagenes/pantallainicio/iconospantallas/eventos.svg" alt="Concursos">
+                        <p>DISFRUTA DE NUESTROS EVENTOS SOCIALES</p>
+                        <p>Ir a sección →</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="pagina-principal-parrafo">
+                        <p>Se llevarán a cabo dos eventos sociales en uno de los más famosos salones de la Ciudad de México, donde podrás convivir y seguir escuchando buen rock.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
